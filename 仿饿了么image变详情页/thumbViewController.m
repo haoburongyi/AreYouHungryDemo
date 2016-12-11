@@ -28,19 +28,17 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
     
-    [self setUpBlur];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hahaha02"]];
+    imgView.frame = self.view.frame;
+    [self.view addSubview:imgView];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, imgView.frame.size.width, imgView.frame.size.height)];
+    toolbar.barStyle = UIBarStyleBlackTranslucent;
+    [imgView addSubview:toolbar];
+    
     [self createCollectionView];
 }
 
 
-- (void)setUpBlur {
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    effectView.frame = self.view.bounds;
-    [self.view addSubview:effectView];
-    
-     effectView.alpha = .5f;
-}
 - (void)createCollectionView {
     NSMutableArray *muArr = [NSMutableArray array];
     for (int i = 0; i < 10; i++) {
