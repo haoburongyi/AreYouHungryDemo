@@ -49,7 +49,6 @@
 - (void)xw_addMagicMoveEndViewGroup:(NSArray<UIView *> *)group {
     if (!group.count) return;
     objc_setAssociatedObject(self, &kXWMagicMoveAnimatorEndViewVCKey, group, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-	
 }
 
 - (void)xw_changeMagicMoveStartViewGroup:(NSArray<UIView *> *)group {
