@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  仿饿了么image变详情页
+//
+//  Created by 张淏 on 16/12/11.
+//  Copyright © 2016年 张淏. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+// 屏幕尺寸
+#define screenSize [UIScreen mainScreen].bounds.size
+// 屏幕宽度
+#define mainScreenW [UIScreen mainScreen].bounds.size.width
+// 屏幕高度
+#define mainScreenH [UIScreen mainScreen].bounds.size.height
+#define SCaleW(x) mainScreenW * (x / 375.0)
+#define SCaleH(x) mainScreenH * (x / 667.0)
+
+
+/**
+ *  RGB颜色
+ */
+#define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+/**
+ *  ARGB颜色
+ */
+#define ARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+// 随机色
+#define RandomColor ARGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256),arc4random_uniform(256))
+
+#endif /* PrefixHeader_pch */
